@@ -1,0 +1,36 @@
+.banner{
+    background-image: url(https://i.ibb.co/VgqBztZ/young-man-after-finishing-trek-top-volcano-caldera.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 250px;
+
+    
+}
+.banner h1{
+    font-size:10vw;
+    text-align: left;
+    padding-left: 10px;
+    
+    font-weight: 900;
+    font-family: 'EB Garamond', serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.search{
+    
+   
+    width: 50%;
+    margin: 20px auto;
+    
+
+}
+.forom{
+    outline: none;
+     color: blueviolet;
+     font-size: 19px;margin: 20px auto;
+}

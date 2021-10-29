@@ -1,0 +1,35 @@
+.services h1{
+        font-family: 'EB Garamond', serif;
+        font-size: 5vw;
+        color: rgb(6, 26, 58);
+
+}
+.services{
+    width: 90%;
+    margin: 20px auto;
+
+    
+}
+.serviceCart img{
+    transition: all 1s;
+}
+.serviceCart  img:hover{
+transform: scale(1.2);
+cursor: pointer;
+}
+.serviceCart .cartImg{
+    overflow: hidden;
+    border-radius: 5px;
+    
+}
+.serviceCart button{
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 4px 15px;
+    border: transparent;
+    background-color: cyan;
+color: purple;
+}
+.serviceCart button:hover{
+transform: scale(1.05);
+}

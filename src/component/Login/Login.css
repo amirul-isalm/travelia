@@ -1,0 +1,30 @@
+.login{
+    background-image: url(https://i.ibb.co/VgqBztZ/young-man-after-finishing-trek-top-volcano-caldera.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 150px;
+
+}
+.loginforom{
+    background-color: rgba(59, 43, 97, 0.424);
+   border-radius: 10px;
+   height:400px ;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+       font-family: 'EB Garamond', serif;
+
+ 
+}
+.login h1{
+    font-weight: 900;
+    font-size: 6vw;
+    font-family: 'EB Garamond', serif;
+ color: rgb(6, 26, 58);
+}
+.loginforom button{
+    border: 1px solid black;
+    border-radius: 25px ;
+}

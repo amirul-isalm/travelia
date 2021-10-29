@@ -1,0 +1,28 @@
+.bookingConfirm{
+    padding-top: 100px;
+    width: 90%;
+    margin: auto;
+    
+}
+.bookingConfirm>h1{
+    font-family: 'EB Garamond', serif;
+        font-size: 5vw;
+        color: rgb(6, 26, 58);
+}
+.confirmForom{
+    display: flex;
+    flex-direction: column;
+   
+    
+}
+
+.confirmForom input{
+    border: none;
+    border-bottom: 1px solid black;
+    margin-top: 22px;
+    font-size: 16px;
+    outline:none;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: transparent;
+}

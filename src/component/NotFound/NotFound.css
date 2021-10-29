@@ -1,0 +1,22 @@
+.notfound{
+    background-image: url(https://i.ibb.co/MPQzryK/404-error-page.jpg);
+ 
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.notfound button{
+    padding: 10px 50px;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px ;
+    transition: all 1s;
+}
+.notfound button:hover{
+    transform: scale(1.2);
+}

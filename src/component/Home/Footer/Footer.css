@@ -1,0 +1,38 @@
+.footer{
+    background-color: black;
+    color: gainsboro;
+   
+}
+.icon {
+    width: 75%;
+    margin:25px 0;
+
+display: flex;
+justify-content: space-around;
+font-size: 30px;
+
+}
+.service{
+    display: flex;
+    flex-direction: column;
+    
+   
+}
+
+.service a{
+    font-size: larger;
+    color: white;
+    text-decoration: none;
+    margin: 3px auto;
+}
+.service a:hover{
+    text-decoration: underline;
+    color: yellow;
+}
+.contact{
+    text-align: left;
+}
+.contact h6{
+    padding: 5px 0;
+    
+}

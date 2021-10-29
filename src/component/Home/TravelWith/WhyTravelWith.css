@@ -1,0 +1,44 @@
+.whyTravel h1{
+        font-family: 'EB Garamond', serif;
+        font-size: 4vw;
+        color: rgb(6, 26, 58);
+
+}
+.whyTravel .worldBesttext{
+     font-size:6vw;
+     text-align: left; 
+     width: 90%;
+     margin: auto;
+}
+.whyTravel{
+    
+    background-image: url(https://i.ibb.co/8ghDz4r/paris.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 50px ;
+    padding-bottom: 50px ;
+}
+.whyTravel>div{
+width: 90%;
+    margin: auto;
+
+}
+.travelCart{
+    box-shadow: 1px 1px 3px 1px black;
+    border-radius: 15px ;
+    width: 95%;
+    margin: 10px auto;
+    padding: 15px ;
+    background-color: rgba(68, 71, 219, 0.246);
+    height: 90%;
+   
+    
+}
+.travelCart h5{
+    font-weight: 800;
+     color: rgb(6, 26, 58);
+}
+.travelCart:hover{
+    transform: scale(1.01);
+}

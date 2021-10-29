@@ -1,0 +1,17 @@
+.airCard{
+   
+    border-radius: 10px ;
+ transition: all 0.5s;
+    padding: 5px ;
+}
+.airCard:hover{
+    transform: scale(1.01);
+     box-shadow: 1px 1px 3px 1px black;
+     cursor: pointer;
+}
+.airlines h1{
+    font-family: 'EB Garamond', serif;
+        font-size: 6vw;
+        color: rgb(6, 26, 58);
+        margin-top: 20px;
+}
