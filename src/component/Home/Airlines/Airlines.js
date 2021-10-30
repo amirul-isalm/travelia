@@ -13,7 +13,7 @@ const Airlines = () => {
     
     if (!airlines.length) {
       return (
-        <div>
+        <div className="mt-5 p-5">
           <Loader type="TailSpin" color="#00BFFF" height={80} width={80} />
         </div>
       );

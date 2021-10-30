@@ -1,20 +1,20 @@
 .login{
-    background-image: url(https://i.ibb.co/VgqBztZ/young-man-after-finishing-trek-top-volcano-caldera.jpg);
+   
     height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding-top: 150px;
+   
+    padding-top: 100px;
 
 }
 .loginforom{
-    background-color: rgba(59, 43, 97, 0.424);
+    background-color: white;
    border-radius: 10px;
    height:400px ;
    display: flex;
    justify-content: center;
    align-items: center;
+   color: purple;
        font-family: 'EB Garamond', serif;
+       box-shadow: 1px 1px 3px 1px gray;
 
  
 }
@@ -27,4 +27,8 @@
 .loginforom button{
     border: 1px solid black;
     border-radius: 25px ;
+    transition: all 0.5s;
+}
+.loginforom button:hover{
+    transform: scale(1.1);
 }

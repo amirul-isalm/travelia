@@ -6,7 +6,7 @@ const WhyTravelWith = () => {
       <div className="whyTravel">
         <div>
           {" "}
-          <h1>Why Travel with Travelia?</h1>
+          <h1>Why Travel with Travelila?</h1>
           <hr />
           <div className="row">
             <div className="col-12 pb-3 row col-lg-6 ">

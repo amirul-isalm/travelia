@@ -13,42 +13,39 @@ FireaseInitialize();
 const useFirebase = () => {
   const [user, setUser] = useState({});
   const [error, setError] = useState("");
+  const [isLoading,setIsLoading]=useState(true)
 
   const provider = new GoogleAuthProvider();
 
   const auth = getAuth();
   const googleSignIn = () => {
-    signInWithPopup(auth, provider)
-      .then((result) => {
-        setUser(result.user);
-        console.log(result.user);
-      })
-      .catch((error) => {
-        setError(error.message);
-      });
+    setIsLoading(true)
+   return signInWithPopup(auth, provider)
+      
   };
 
   const logOut = () => {
   
     signOut(auth)
       .then(() => {
-        setUser("")
+        setUser("");
       })
       .catch((error) => {
-        setError(error.message)
-      });
+        setError(error.message);
+      })
+      .finally(() => setIsLoading(false));
   }
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
-      } else {
       }
+      setIsLoading(false);
     });
   }, []);
 
-  return { user, setUser, error, setError, googleSignIn,logOut };
+  return { user, setUser, error, setError, googleSignIn,logOut,isLoading,setIsLoading };
 };
 
 export default useFirebase;

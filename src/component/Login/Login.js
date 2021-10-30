@@ -1,13 +1,27 @@
 import React from "react";
+import {  useHistory, useLocation } from "react-router";
 import useAuth from "../Context/useAuth";
 import "./Login.css";
 
 const Login = () => {
-    const { googleSignIn } = useAuth();
+  const { googleSignIn, setUser, setError,  setIsLoading } =
+    useAuth();
+  // redirect login
+  const location = useLocation();
+  const history = useHistory();
+  const Redirect_url = location.state?.from || "/home";
 
-    const handelClickLogin = () => {
-        googleSignIn()
-    }
+  const handelClickLogin = () => {
+    googleSignIn()
+      .then((result) => {
+        setUser(result.user);
+        history.push(Redirect_url);
+      })
+      .catch((error) => {
+        setError(error.message);
+      })
+      .finally(() => setIsLoading(false));
+  };
   return (
     <div className="login">
       <h1>Please Login </h1>
@@ -16,7 +30,7 @@ const Login = () => {
           style={{ display: "flex", flexDirection: "column" }}
           className="loginforom col-10 col-lg-5    mx-auto"
         >
-          <h3 className="text-light">--Login with--</h3>
+          <h3 className="">--Login with--</h3>
           <button onClick={handelClickLogin} className=" w-75">
             <div className="row">
               <div

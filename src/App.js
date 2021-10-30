@@ -12,6 +12,10 @@ import ContextCreate from "./component/Context/ContextCreate";
 import BookingConfirm from "./component/BookingConfirm/BookingConfirm";
 import NotFound from "./component/NotFound/NotFound";
 import MyBooking from "./component/MyBooking/MyBooking";
+import AddANewService from "./component/AddANewService/AddANewService";
+import MangeAllBooking from "./component/ManageAllBooking/MangeAllBooking";
+import ChangeBookingStatus from "./component/ManageAllBooking/ChangeBookingStatus";
+import PrivetRouter from "./component/PrivetRouter/PrivetRouter";
 
 function App() {
   return (
@@ -31,13 +35,22 @@ function App() {
             <Route path="/login">
               <Login></Login>
             </Route>
-            <Route path="/myBookings">
+            <PrivetRouter path="/myBookings">
               <MyBooking></MyBooking>
-            </Route>
+            </PrivetRouter>
+            <PrivetRouter path="/manageAllBooking">
+              <MangeAllBooking></MangeAllBooking>
+            </PrivetRouter>
+            <PrivetRouter path="/addNewService">
+              <AddANewService></AddANewService>
+            </PrivetRouter>
+            <PrivetRouter path="/allBooking/:id">
+              <ChangeBookingStatus></ChangeBookingStatus>
+            </PrivetRouter>
 
-            <Route path="/service/:id">
+            <PrivetRouter  path="/service/:id">
               <BookingConfirm></BookingConfirm>
-            </Route>
+            </PrivetRouter>
             <Route path="*">
               <NotFound></NotFound>
             </Route>

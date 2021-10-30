@@ -27,8 +27,8 @@ const Footer = () => {
             alt=""
           />
           <p className=" my-5  fw-bold">
-            Travelia Is a travel agancy and tour planer agancy. This is the best
-            tour planer agancy in the bangladesh. Travelia provide best service
+            Travelila Is a travel agancy and tour planer agancy. This is the best
+            tour planer agancy in the bangladesh. Travelila provide best service
             their coustomer.
           </p>
         </div>
@@ -76,7 +76,7 @@ const Footer = () => {
         </div>
       </div>
       <hr />
-      <small> Travelia © 2021 All Right Reserved</small>
+      <small> Travelila © 2021 All Right Reserved</small>
     </div>
   );
 };

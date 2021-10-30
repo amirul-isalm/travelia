@@ -22,16 +22,17 @@ const BookingConfirm = () => {
       .then((res) => res.json())
       .then((data) => setService(data));
   }, [id]);
-
+ 
   const { name, price, photo, duration, location, description } = service;
 
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     data.photo = photo;
     data.price = price;
+    data.totlPrice = parseInt(price)*data.person;
     data.duration = duration;
     data.status = "Pending";
-    console.log(data);
+  
 
     axios.post("http://localhost:5000/confirmBooking", { data }).then((res) => {
       if (res.data.insertedId) {
@@ -46,7 +47,7 @@ const BookingConfirm = () => {
 
   if (!service.name) {
     return (
-      <div>
+      <div className="mt-5 p-5" >
         <Loader type="TailSpin" color="#00BFFF" height={80} width={80} />
       </div>
     );
@@ -86,6 +87,10 @@ const BookingConfirm = () => {
             <input
               value={user.email || ""}
               {...register("email", { required: true })}
+            />
+            <input
+             type="number" placeholder="How many people visite?"
+              {...register("person", { required: true })}
             />
             <input
               value={name || ""}

@@ -1,9 +1,13 @@
-.myBooking{
+.bookings{
 padding-top: 100px;   
  width: 90%;
+ margin: auto;
  
 }
-.myBooking h1{
+.bookings h1{
     font-family: 'EB Garamond', serif;
     font-size:4.5rem;
 }
+ .bookings b{
+     margin: auto 10px auto 0;
+ }
