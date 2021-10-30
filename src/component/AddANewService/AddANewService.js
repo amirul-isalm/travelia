@@ -8,15 +8,18 @@ const AddANewService = () => {
     const onSubmit = (data) => {
      
 console.log(data)
-        axios.post("http://localhost:5000/addNewSevice", { data })
-            .then((res) => {
-      if (res.data.insertedId) {
-        alert("Service add Successfully");
-        reset();
-      } else {
-        alert("Added  Faield");
-      }
-    });
+        axios
+          .post("https://polar-basin-99537.herokuapp.com/addNewSevice", {
+            data,
+          })
+          .then((res) => {
+            if (res.data.insertedId) {
+              alert("Service add Successfully");
+              reset();
+            } else {
+              alert("Added  Faield");
+            }
+          });
 
 
  };

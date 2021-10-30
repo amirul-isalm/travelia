@@ -18,7 +18,7 @@ const BookingConfirm = () => {
   const [service, setService] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:5000/services/${id}`)
+    fetch(`https://polar-basin-99537.herokuapp.com/services/${id}`)
       .then((res) => res.json())
       .then((data) => setService(data));
   }, [id]);
@@ -34,15 +34,16 @@ const BookingConfirm = () => {
     data.status = "Pending";
   
 
-    axios.post("http://localhost:5000/confirmBooking", { data }).then((res) => {
-      if (res.data.insertedId) {
-        alert("Booking Successfully");
-        reset();
-      }
-      else {
-          alert("Booking Faield")
-      }
-    });
+    axios
+      .post("https://polar-basin-99537.herokuapp.com/confirmBooking", { data })
+      .then((res) => {
+        if (res.data.insertedId) {
+          alert("Booking Successfully");
+          reset();
+        } else {
+          alert("Booking Faield");
+        }
+      });
   };
 
   if (!service.name) {

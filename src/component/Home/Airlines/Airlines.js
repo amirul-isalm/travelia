@@ -6,9 +6,9 @@ import "./Airline.css"
 const Airlines = () => {
     const [airlines, setAirlines] = useState({})
     useEffect(() => {
-        fetch("http://localhost:5000/airlines")
-            .then(res => res.json())
-        .then(data=>setAirlines(data))
+        fetch("https://polar-basin-99537.herokuapp.com/airlines")
+          .then((res) => res.json())
+          .then((data) => setAirlines(data));
     }, [])
     
     if (!airlines.length) {

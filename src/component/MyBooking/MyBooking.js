@@ -16,7 +16,7 @@ const MyBooking = () => {
         </div>
       );
     }
-    fetch(`http://localhost:5000/allBooking/${user.email}`)
+    fetch(`https://polar-basin-99537.herokuapp.com/allBooking/${user.email}`)
       .then((res) => res.json())
       .then((data) => setAllBooking(data));
   }, [user]);

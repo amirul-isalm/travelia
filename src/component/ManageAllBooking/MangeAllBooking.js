@@ -7,7 +7,7 @@ const MangeAllBooking = () => {
     
      const [allBooking, setAllBooking] = useState([]);
      useEffect(() => {
-       fetch("http://localhost:5000/allBooking")
+       fetch("https://polar-basin-99537.herokuapp.com/allBooking")
          .then((res) => res.json())
          .then((data) => setAllBooking(data));
      }, []);

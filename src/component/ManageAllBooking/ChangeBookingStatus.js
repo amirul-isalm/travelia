@@ -8,7 +8,7 @@ const ChangeBookingStatus = () => {
   const history = useHistory();
   const [booking, setBooking] = useState({});
   useEffect(() => {
-    fetch(`http://localhost:5000/booking/${id}`)
+    fetch(`https://polar-basin-99537.herokuapp.com/booking/${id}`)
       .then((res) => res.json())
       .then((data) => setBooking(data));
   }, [id]);
@@ -45,7 +45,7 @@ const ChangeBookingStatus = () => {
     );
 
     if (confirm) {
-      fetch(`http://localhost:5000/booking/${id}`, {
+      fetch(`https://polar-basin-99537.herokuapp.com/booking/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

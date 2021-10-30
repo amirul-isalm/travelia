@@ -19,7 +19,7 @@ phone,
   const clickDeleteBtn = (id) => {
     const isConfirm = window.confirm("Are you sure  to delete this booking ?");
     if (isConfirm) {
-      fetch(`http://localhost:5000/booking/${id}`, {
+      fetch(`https://polar-basin-99537.herokuapp.com/booking/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
