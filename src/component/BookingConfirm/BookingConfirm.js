@@ -33,7 +33,7 @@ const BookingConfirm = () => {
     data.duration = duration;
     data.status = "Pending";
   
-
+console.log(data)
     axios
       .post("https://polar-basin-99537.herokuapp.com/confirmBooking", { data })
       .then((res) => {
@@ -90,8 +90,9 @@ const BookingConfirm = () => {
               {...register("email", { required: true })}
             />
             <input
-             type="number" placeholder="How many people visite?"
-              {...register("person", { required: true })}
+              type="number"
+              placeholder="How many people visite?"
+              {...register("person", { required: true, min: 1})}
             />
             <input
               value={name || ""}
