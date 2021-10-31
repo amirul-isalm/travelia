@@ -7,7 +7,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import Loader from "react-loader-spinner";
-import { useHistory, useParams } from "react-router";
+import { useParams } from "react-router";
 import useAuth from "../Context/useAuth";
 import "./BookingConfirm.css";
 
@@ -33,7 +33,7 @@ const BookingConfirm = () => {
     data.duration = duration;
     data.status = "Pending";
   
-console.log(data)
+
     axios
       .post("https://polar-basin-99537.herokuapp.com/confirmBooking", { data })
       .then((res) => {
@@ -67,9 +67,12 @@ console.log(data)
           <p>
             <FontAwesomeIcon icon={faCalendarAlt} /> {duration}
           </p>
-          <p>
-            <h5> BDT {price}</h5>
-          </p>
+
+          <h5>
+            {" "}
+            <b>BDT</b> {price}
+          </h5>
+
           <h5>
             <b>Tour Details:</b>
           </h5>
@@ -92,7 +95,7 @@ console.log(data)
             <input
               type="number"
               placeholder="How many people visite?"
-              {...register("person", { required: true, min: 1})}
+              {...register("person", { required: true, min: 1 })}
             />
             <input
               value={name || ""}

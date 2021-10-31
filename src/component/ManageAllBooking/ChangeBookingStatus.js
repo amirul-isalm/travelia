@@ -25,7 +25,7 @@ const ChangeBookingStatus = () => {
 
       status,
     phone,
-    _id,
+    
   } = booking;
 
   if (!serviceName) {

@@ -1,11 +1,10 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./component/Header/Header";
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
-import Banner from "./component/Home/Banner/Banner";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+
 import Footer from "./component/Home/Footer/Footer";
 
-import Airlines from "./component/Home/Airlines/Airlines";
 import Home from "./component/Home/Home";
 import Login from "./component/Login/Login";
 import ContextCreate from "./component/Context/ContextCreate";

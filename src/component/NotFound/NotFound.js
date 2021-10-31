@@ -1,6 +1,6 @@
 import { faBackspace } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useState } from 'react';
+import React from 'react';
 import { useHistory } from 'react-router';
 import "./NotFound.css"
 const NotFound = () => {

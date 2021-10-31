@@ -1,6 +1,6 @@
 import {
   faFacebook,
-  faFacebookF,
+
   faGithub,
   faInstagram,
   faLinkedin,
